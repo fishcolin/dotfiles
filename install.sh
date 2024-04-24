@@ -1,3 +1,12 @@
+# Copy the local .zshrc file to the home directory to apply custom Zsh configurations
+cp .zshrc ~/.zshrc
+
+# Copy the local .gitconfig file to the home directory to apply custom Git configurations
+cp .gitconfig ~/.gitconfig
+
+# Update package manager repositories
+sudo apt update
+
 # Install Zsh using the package manager for Ubuntu/Debian
 sudo apt install zsh
 
@@ -9,9 +18,3 @@ git clone git://github.com/jonas/tig.git
 cd tig && \
   make && \           # Compile Tig from source
   make install        # Install Tig binaries system-wide
-
-# Copy the local .zshrc file to the home directory to apply custom Zsh configurations
-cp .zshrc ~/.zshrc
-
-# Copy the local .gitconfig file to the home directory to apply custom Git configurations
-cp .gitconfig ~/.gitconfig
