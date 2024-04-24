@@ -6,3 +6,5 @@ plugins=(git)
 
 # Source Oh My Zsh to load the configurations
 source $ZSH/oh-my-zsh.sh
+
+ZSH_THEME="robbyrussell"
