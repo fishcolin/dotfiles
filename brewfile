@@ -1,0 +1,29 @@
+# brew bundle --file=./brewfile
+
+# Tap the necessary repositories
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+
+# Command-line tools
+brew "git"
+brew "node"
+brew "python"
+brew "tmux"
+brew "wget"
+brew "jq"
+brew "zsh"  # Upgrade to latest zsh version (macOS comes with one, but this gets the latest)
+
+# GUI Applications
+cask "visual-studio-code"
+cask "spotify"
+cask "docker"
+cask "zoom"
+cask "stats"         # A system monitor app to keep track of performance
+cask "iterm2"        # Alternative terminal for a better experience
+cask "slack"         # For team communications
+cask "google-chrome" # Browser for development and testing
+
+# Note: oh-my-zsh is not available via Homebrew.
+# After running brew bundle, install it manually with:
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
