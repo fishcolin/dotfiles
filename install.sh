@@ -8,7 +8,7 @@ fi
 
 # Run the Brewfile (assuming it's in the current directory)
 echo "Running Brewfile..."
-brew bundle --file=./.Brewfile
+brew bundle
 
 # Apply custom Zsh configurations
 echo "Copying .zshrc to home directory..."
