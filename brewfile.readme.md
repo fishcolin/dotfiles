@@ -1,731 +1,891 @@
-### How to Use This Guide
+# Developer Utilities Quick Reference Guide
 
-1. **Browse the List:**  
-   Use this guide as a reference to understand what each tool does and where to find more detailed documentation.
+This guide provides a quick overview of many of the tools installed via Homebrew. For each utility, you'll find:
+- A brief description
+- A basic usage command
+- A link to its official documentation
 
-2. **Integration with Your Brewfile:**  
-   The Brewfile you use installs these tools automatically. Refer back to this guide if you need help configuring or troubleshooting a specific tool.
+Use this document as a reference when configuring or troubleshooting your development environment.
 
-3. **Further Customization:**  
-   Many of these tools offer extensive configuration options. The provided documentation links are a great starting point to learn more and tailor each tool to your workflow.
+---
 
-This guide should serve as a quick-reference resource to get you started with each tool in your development environment. Feel free to bookmark it or integrate it into your documentation for future reference!
+# How to Use This Guide
 
-### Command Line Essentials
+1. **Reference:**  
+   Use this guide as a quick reference to recall what each tool does, how to use it with a basic command, and where to find more detailed documentation.
+
+2. **Customize:**  
+   Feel free to update or expand this document as you explore more features or add new tools to your environment.
+
+3. **Integrate:**  
+   Add this Markdown file to your dotenv/dotfiles repo for easy access whenever you need a refresher on your toolchain.
+
+---
+
+## Command Line Essentials
 
 - **git**  
   *Version control system.*  
-  Documentation: [Git Documentation](https://git-scm.com/doc)
+  **Usage:** `git status`  
+  **Docs:** [Git Documentation](https://git-scm.com/doc)
 
 - **neovim**  
-  *Modern text editor optimized for development.*  
-  Documentation: [Neovim Docs](https://neovim.io/doc/)
+  *Modern text editor optimized for developers.*  
+  **Usage:** `nvim filename`  
+  **Docs:** [Neovim Docs](https://neovim.io/doc/)
 
 - **ranger**  
-  *Console file manager with VI key bindings.*  
-  Documentation: [Ranger Documentation](https://ranger.github.io/)
+  *Console file manager with Vim-style keybindings.*  
+  **Usage:** `ranger`  
+  **Docs:** [Ranger Documentation](https://ranger.github.io/)
 
 - **tmux**  
-  *Terminal multiplexer for managing multiple sessions.*  
-  Documentation: [tmux Wiki](https://github.com/tmux/tmux/wiki)
+  *Terminal multiplexer for managing sessions.*  
+  **Usage:** `tmux new -s mysession`  
+  **Docs:** [tmux Wiki](https://github.com/tmux/tmux/wiki)
 
 ---
 
-### CLI Basics
+## CLI Basics
 
 - **aria2**  
-  *Lightweight multi-protocol download utility with resume support.*  
-  Documentation: [aria2 Manual](https://aria2.github.io/manual/en/html/aria2c.html)
+  *Multi-protocol download utility with resume support.*  
+  **Usage:** `aria2c http://example.com/file.zip`  
+  **Docs:** [aria2 Manual](https://aria2.github.io/manual/en/html/aria2c.html)
 
 - **bat**  
-  *A cat(1) clone with syntax highlighting and Git integration.*  
-  Documentation: [bat on GitHub](https://github.com/sharkdp/bat)
+  *Cat clone with syntax highlighting and Git integration.*  
+  **Usage:** `bat filename`  
+  **Docs:** [bat on GitHub](https://github.com/sharkdp/bat)
 
 - **broot**  
-  *Interactive directory navigation tool with preview capabilities.*  
-  Documentation: [Broot Documentation](https://dystroy.org/broot/)
+  *Interactive directory navigator with file preview.*  
+  **Usage:** `broot`  
+  **Docs:** [Broot Documentation](https://dystroy.org/broot/)
 
 - **ctags**  
-  *Tool to index source code files for quick navigation.*  
-  Documentation: [Exuberant Ctags](http://ctags.sourceforge.net/)
+  *Generate tag files for source code navigation.*  
+  **Usage:** `ctags -R .`  
+  **Docs:** [Exuberant Ctags](http://ctags.sourceforge.net/)
 
 - **diff-so-fancy**  
-  *Enhances Git diff output for better readability.*  
-  Documentation: [diff-so-fancy on GitHub](https://github.com/so-fancy/diff-so-fancy)
+  *Enhance diff output for improved readability.*  
+  **Usage:** `git diff | diff-so-fancy`  
+  **Docs:** [diff-so-fancy on GitHub](https://github.com/so-fancy/diff-so-fancy)
 
 - **duf**  
-  *Disk usage utility that provides a modern, human-readable output.*  
-  Documentation: [duf on GitHub](https://github.com/muesli/duf)
+  *Modern disk usage viewer with human-readable output.*  
+  **Usage:** `duf`  
+  **Docs:** [duf on GitHub](https://github.com/muesli/duf)
 
 - **entr**  
-  *Utility to run arbitrary commands when files change.*  
-  Documentation: [entr Project](https://eradman.com/entrproject/)
+  *Run arbitrary commands when files change.*  
+  **Usage:** `echo file.txt | entr command`  
+  **Docs:** [entr Project](https://eradman.com/entrproject/)
 
 - **exa**  
-  *Modern replacement for `ls` with colorized output and tree view.*  
-  Documentation: [exa website](https://the.exa.website/)
+  *Modern alternative to `ls` with color and tree views.*  
+  **Usage:** `exa -la`  
+  **Docs:** [exa website](https://the.exa.website/)
 
 - **exiftool**  
-  *Reads, writes, and edits metadata in various files.*  
-  Documentation: [ExifTool Documentation](https://exiftool.org/)
+  *Read and write metadata in files.*  
+  **Usage:** `exiftool image.jpg`  
+  **Docs:** [ExifTool Documentation](https://exiftool.org/)
 
 - **fzf**  
-  *Command-line fuzzy finder for files and commands.*  
-  Documentation: [fzf on GitHub](https://github.com/junegunn/fzf)
+  *Fuzzy finder for files, history, and more.*  
+  **Usage:** `fzf`  
+  **Docs:** [fzf on GitHub](https://github.com/junegunn/fzf)
 
 - **hyperfine**  
-  *Benchmarking tool to measure execution times of commands.*  
-  Documentation: [hyperfine on GitHub](https://github.com/sharkdp/hyperfine)
+  *Benchmark command execution times.*  
+  **Usage:** `hyperfine "sleep 1"`  
+  **Docs:** [hyperfine on GitHub](https://github.com/sharkdp/hyperfine)
 
 - **jdupes**  
-  *Finds duplicate files quickly and efficiently.*  
-  Documentation: [jdupes on GitHub](https://github.com/jansorg/jdupes)
+  *Find duplicate files quickly.*  
+  **Usage:** `jdupes .`  
+  **Docs:** [jdupes on GitHub](https://github.com/jdupes/jdupes)
 
 - **just**  
-  *A modern command runner for automating tasks (similar to make).*  
-  Documentation: [just on GitHub](https://github.com/casey/just)
+  *Task runner for automating commands (similar to make).*  
+  **Usage:** `just build`  
+  **Docs:** [just on GitHub](https://github.com/casey/just)
 
 - **jq**  
-  *Lightweight and flexible command-line JSON processor.*  
-  Documentation: [jq Manual](https://stedolan.github.io/jq/)
+  *Lightweight JSON processor for querying files.*  
+  **Usage:** `jq . file.json`  
+  **Docs:** [jq Manual](https://stedolan.github.io/jq/)
 
 - **most**  
-  *Pager with multiple window support, as an alternative to less.*  
-  Documentation: [most Manual](http://www.jedsoft.org/most/)
+  *Pager with support for multiple windows (alternative to less).*  
+  **Usage:** `most file.txt`  
+  **Docs:** [most Manual](http://www.jedsoft.org/most/)
 
 - **procs**  
-  *A modern process viewer with advanced filtering and search.*  
-  Documentation: [procs on GitHub](https://github.com/dalance/procs)
+  *Modern process viewer with filtering and search.*  
+  **Usage:** `procs`  
+  **Docs:** [procs on GitHub](https://github.com/dalance/procs)
 
 - **ripgrep**  
-  *A fast recursive search tool that outperforms grep.*  
-  Documentation: [ripgrep on GitHub](https://github.com/BurntSushi/ripgrep)
+  *Fast recursive search tool that outperforms grep.*  
+  **Usage:** `rg "pattern" .`  
+  **Docs:** [ripgrep on GitHub](https://github.com/BurntSushi/ripgrep)
 
 - **rsync**  
-  *Fast and versatile file-copying tool with incremental transfers.*  
-  Documentation: [rsync Documentation](https://rsync.samba.org/documentation.html)
+  *Efficient file transfer and synchronization tool.*  
+  **Usage:** `rsync -avh src/ dest/`  
+  **Docs:** [rsync Documentation](https://rsync.samba.org/documentation.html)
 
 - **sd**  
-  *Intuitive find and replace tool using regular expressions.*  
-  Documentation: [sd on GitHub](https://github.com/chmln/sd)
+  *Intuitive find and replace using regular expressions.*  
+  **Usage:** `sd 'old' 'new' file.txt`  
+  **Docs:** [sd on GitHub](https://github.com/chmln/sd)
 
 - **thefuck**  
-  *Automatically corrects mistyped commands in your shell.*  
-  Documentation: [thefuck on GitHub](https://github.com/nvbn/thefuck)
+  *Automatically correct mistyped commands.*  
+  **Usage:** `fuck`  
+  **Docs:** [thefuck on GitHub](https://github.com/nvbn/thefuck)
 
 - **tldr**  
   *Community-maintained simplified man pages for common commands.*  
-  Documentation: [tldr.sh](https://tldr.sh/)
+  **Usage:** `tldr ls`  
+  **Docs:** [tldr.sh](https://tldr.sh/)
 
 - **tokei**  
-  *Counts lines of code in your projects (alternative to cloc).*  
-  Documentation: [tokei on GitHub](https://github.com/XAMPPRocky/tokei)
+  *Count lines of code in projects quickly.*  
+  **Usage:** `tokei .`  
+  **Docs:** [tokei on GitHub](https://github.com/XAMPPRocky/tokei)
 
 - **tree**  
-  *Displays directory structures in a tree-like format.*  
-  Documentation: [tree Manual](http://mama.indstate.edu/users/ice/tree/)
+  *Display directory structure in a tree format.*  
+  **Usage:** `tree`  
+  **Docs:** [tree Manual](http://mama.indstate.edu/users/ice/tree/)
 
 - **trash-cli**  
-  *Provides a command-line interface to the macOS trash (recycle bin).*  
-  Documentation: [trash-cli on GitHub](https://github.com/sindresorhus/trash-cli)
+  *Command-line interface to send files to the trash instead of deleting.*  
+  **Usage:** `trash file.txt`  
+  **Docs:** [trash-cli on GitHub](https://github.com/sindresorhus/trash-cli)
 
 - **watch**  
-  *Periodically runs a command and displays its output.*  
-  Documentation: [watch Manual](https://linux.die.net/man/1/watch)
+  *Periodically execute a command and show its output.*  
+  **Usage:** `watch -n 1 date`  
+  **Docs:** [watch Manual](https://linux.die.net/man/1/watch)
 
 - **zoxide**  
-  *Smart directory jumper that learns your habits over time.*  
-  Documentation: [zoxide on GitHub](https://github.com/ajeetdsouza/zoxide)
+  *Smart directory jumper that learns your navigation habits.*  
+  **Usage:** `zoxide query project`  
+  **Docs:** [zoxide on GitHub](https://github.com/ajeetdsouza/zoxide)
 
 ---
 
-### CLI Monitoring and Performance
+## CLI Monitoring and Performance
 
 - **bmon**  
-  *Simple real-time bandwidth monitor.*  
-  Documentation: [bmon on SourceForge](https://sourceforge.net/projects/bmon/)
+  *Monitor bandwidth utilization in real time.*  
+  **Usage:** `bmon`  
+  **Docs:** [bmon on SourceForge](https://sourceforge.net/projects/bmon/)
 
 - **ctop**  
-  *Top-like interface for container metrics and monitoring.*  
-  Documentation: [ctop on GitHub](https://github.com/bcicen/ctop)
+  *Interactive dashboard for container metrics.*  
+  **Usage:** `ctop`  
+  **Docs:** [ctop on GitHub](https://github.com/bcicen/ctop)
 
 - **dog**  
-  *A command-line DNS client that provides simple DNS lookups.*  
-  Documentation: [dog on GitHub](https://github.com/ogham/dog)
+  *Simplified DNS lookup client.*  
+  **Usage:** `dog example.com`  
+  **Docs:** [dog on GitHub](https://github.com/ogham/dog)
 
 - **bpytop**  
-  *Resource monitor written in Python with an intuitive UI.*  
-  Documentation: [bpytop on GitHub](https://github.com/aristocratos/bpytop)
+  *Terminal-based system resource monitor with an intuitive UI.*  
+  **Usage:** `bpytop`  
+  **Docs:** [bpytop on GitHub](https://github.com/aristocratos/bpytop)
 
 - **dua-cli**  
-  *Disk usage analyzer that helps you quickly identify space hogs.*  
-  Documentation: [dua-cli on GitHub](https://github.com/imsnif/dua-cli)
+  *Disk usage analyzer to help find space hogs.*  
+  **Usage:** `dua`  
+  **Docs:** [dua-cli on GitHub](https://github.com/imsnif/dua-cli)
 
 - **glances**  
-  *Cross-platform monitoring tool with a web interface option.*  
-  Documentation: [Glances Documentation](https://nicolargo.github.io/glances/)
+  *Cross-platform system monitoring tool with optional web UI.*  
+  **Usage:** `glances`  
+  **Docs:** [Glances Documentation](https://nicolargo.github.io/glances/)
 
 - **goaccess**  
-  *Real-time web log analyzer for quick insights on website traffic.*  
-  Documentation: [GoAccess Documentation](https://goaccess.io/documentation)
+  *Real-time log analyzer for web servers.*  
+  **Usage:** `goaccess access.log`  
+  **Docs:** [GoAccess Documentation](https://goaccess.io/documentation)
 
 - **gping**  
-  *Interactive ping tool that visualizes network latency with graphs.*  
-  Documentation: [gping on GitHub](https://github.com/orf/gping)
+  *Interactive ping tool that graphs latency over time.*  
+  **Usage:** `gping google.com`  
+  **Docs:** [gping on GitHub](https://github.com/orf/gping)
 
 - **speedtest-cli**  
-  *Command-line interface for testing internet bandwidth using Speedtest.net.*  
-  Documentation: [speedtest-cli on GitHub](https://github.com/sivel/speedtest-cli)
+  *Test your internet speed from the command line.*  
+  **Usage:** `speedtest-cli`  
+  **Docs:** [speedtest-cli on GitHub](https://github.com/sivel/speedtest-cli)
 
 ---
 
-### CLI Productivity Apps
+## CLI Productivity Apps
 
 - **aspell**  
-  *A powerful spell-checker for text files and documents.*  
-  Documentation: [Aspell Manual](http://aspell.net/)
+  *Spell checker for text files.*  
+  **Usage:** `aspell check file.txt`  
+  **Docs:** [Aspell Manual](http://aspell.net/)
 
 - **browsh**  
-  *A modern text-based web browser that supports HTML5 and CSS3.*  
-  Documentation: [Browsh Docs](https://brow.sh/)
-  
+  *Modern terminal-based web browser.*  
+  **Usage:** `browsh`  
+  **Docs:** [Browsh Docs](https://brow.sh/)
+
 - **buku**  
-  *Bookmark manager that allows quick searching and organization of your bookmarks.*  
-  Documentation: [Buku on GitHub](https://github.com/jarun/Buku)
+  *Manage your bookmarks from the terminal.*  
+  **Usage:** `buku -L`  
+  **Docs:** [Buku on GitHub](https://github.com/jarun/Buku)
 
 - **cmus**  
-  *A fast and lightweight music player for the terminal.*  
-  Documentation: [cmus Documentation](https://cmus.github.io/)
+  *Lightweight music player for the terminal.*  
+  **Usage:** `cmus`  
+  **Docs:** [cmus Documentation](https://cmus.github.io/)
 
 - **cointop**  
-  *Monitor cryptocurrency prices and manage your portfolio from the CLI.*  
-  Documentation: [cointop on GitHub](https://github.com/moinakbiswas/cointop)
+  *Monitor cryptocurrency prices and manage your portfolio.*  
+  **Usage:** `cointop`  
+  **Docs:** [cointop on GitHub](https://github.com/moinakbiswas/cointop)
 
 - **ddgr**  
-  *DuckDuckGo search from the terminal without the clutter of a browser.*  
-  Documentation: [ddgr on GitHub](https://github.com/jarun/ddgr)
+  *DuckDuckGo search from the terminal.*  
+  **Usage:** `ddgr query`  
+  **Docs:** [ddgr on GitHub](https://github.com/jarun/ddgr)
 
 - **khal**  
-  *Command-line calendar program with support for iCalendar.*  
-  Documentation: [khal on GitHub](https://github.com/pimutils/khal)
+  *Calendar client that supports iCalendar files.*  
+  **Usage:** `khal list`  
+  **Docs:** [khal on GitHub](https://github.com/pimutils/khal)
 
 - **mutt**  
-  *A powerful text-based email client for Unix systems.*  
-  Documentation: [Mutt Documentation](http://www.mutt.org/doc/)
+  *Text-based email client.*  
+  **Usage:** `mutt`  
+  **Docs:** [Mutt Documentation](http://www.mutt.org/doc/)
 
 - **newsboat**  
-  *RSS/ATOM feed reader for the terminal with extensive configuration options.*  
-  Documentation: [Newsboat Documentation](https://newsboat.org/documentation/)
-  
+  *Terminal-based RSS/ATOM feed reader.*  
+  **Usage:** `newsboat`  
+  **Docs:** [Newsboat Documentation](https://newsboat.org/documentation/)
+
 - **pass**  
-  *Simple, secure password management using GPG encryption.*  
-  Documentation: [Password Store Documentation](https://www.passwordstore.org/)
-  
+  *Secure password manager using GPG encryption.*  
+  **Usage:** `pass ls`  
+  **Docs:** [Password Store Documentation](https://www.passwordstore.org/)
+
 - **rclone**  
-  *Command-line program to manage files on cloud storage services.*  
-  Documentation: [rclone Documentation](https://rclone.org/docs/)
-  
+  *Manage and sync files across cloud storage providers.*  
+  **Usage:** `rclone ls remote:`  
+  **Docs:** [rclone Documentation](https://rclone.org/docs/)
+
 - **task**  
-  *Advanced task management and todo tool (Taskwarrior).*  
-  Documentation: [Taskwarrior Manual](https://taskwarrior.org/docs/)
+  *Advanced task and todo management (Taskwarrior).*  
+  **Usage:** `task list`  
+  **Docs:** [Taskwarrior Manual](https://taskwarrior.org/docs/)
 
 ---
 
-### CLI Development Tools
+## CLI Development Tools
 
 - **httpie**  
-  *User-friendly HTTP client with intuitive CLI commands for API testing.*  
-  Documentation: [HTTPie Docs](https://httpie.io/docs)
+  *Friendly HTTP client for testing APIs.*  
+  **Usage:** `http GET https://api.example.com`  
+  **Docs:** [HTTPie Docs](https://httpie.io/docs)
   
 - **lazydocker**  
-  *A simple terminal UI for Docker to manage containers easily.*  
-  Documentation: [lazydocker on GitHub](https://github.com/jesseduffield/lazydocker)
+  *Terminal UI for managing Docker containers.*  
+  **Usage:** `lazydocker`  
+  **Docs:** [lazydocker on GitHub](https://github.com/jesseduffield/lazydocker)
   
 - **lazygit**  
-  *A simple terminal UI for Git commands, making Git operations easier.*  
-  Documentation: [lazygit on GitHub](https://github.com/jesseduffield/lazygit)
+  *Interactive terminal UI for Git operations.*  
+  **Usage:** `lazygit`  
+  **Docs:** [lazygit on GitHub](https://github.com/jesseduffield/lazygit)
   
 - **kdash**  
-  *Terminal dashboard for monitoring Kubernetes clusters.*  
-  Documentation: [kdash on GitHub](https://github.com/kdash-rs/kdash)
+  *Dashboard for monitoring Kubernetes clusters.*  
+  **Usage:** `kdash`  
+  **Docs:** [kdash on GitHub](https://github.com/kdash-rs/kdash)
 
 ---
 
-### CLI External Services
+## CLI External Services
 
 - **ngrok**  
-  *Expose a local server to the internet with secure tunnels.*  
-  Documentation: [ngrok Docs](https://ngrok.com/docs)
+  *Expose a local web server to the internet via secure tunnels.*  
+  **Usage:** `ngrok http 8080`  
+  **Docs:** [ngrok Docs](https://ngrok.com/docs)
   
 - **tmate**  
-  *Instant terminal sharing that lets you collaborate with others in real time.*  
-  Documentation: [tmate.io](https://tmate.io/)
+  *Instant terminal sharing for collaborative sessions.*  
+  **Usage:** `tmate`  
+  **Docs:** [tmate.io](https://tmate.io/)
   
 - **asciinema**  
-  *Record and share terminal sessions as high-quality animated GIFs.*  
-  Documentation: [asciinema Documentation](https://asciinema.org/)
+  *Record and share terminal sessions as animated recordings.*  
+  **Usage:** `asciinema rec session.cast`  
+  **Docs:** [asciinema Documentation](https://asciinema.org/)
   
 - **navi**  
-  *Browse, search, and use cheat sheets directly from the terminal.*  
-  Documentation: [navi on GitHub](https://github.com/denisidoro/navi)
+  *Browse cheat sheets directly from the terminal.*  
+  **Usage:** `navi`  
+  **Docs:** [navi on GitHub](https://github.com/denisidoro/navi)
 
 ---
 
-### CLI Fun
+## CLI Fun
 
 - **cowsay**  
-  *Have an ASCII cow deliver your messages in the terminal.*  
-  Documentation: [cowsay on GitHub](https://github.com/tnalpgge/rank-amateur-cowsay)
+  *Have an ASCII cow speak your message.*  
+  **Usage:** `cowsay "Hello, world!"`  
+  **Docs:** [cowsay on GitHub](https://github.com/tnalpgge/rank-amateur-cowsay)
   
 - **figlet**  
-  *Convert text into large ASCII art banners.*  
-  Documentation: [figlet Official Site](http://www.figlet.org/)
+  *Render text as large ASCII art banners.*  
+  **Usage:** `figlet "Hello"`  
+  **Docs:** [figlet Official Site](http://www.figlet.org/)
   
 - **lolcat**  
-  *Colorize terminal output to display rainbow-colored text.*  
-  Documentation: [lolcat on GitHub](https://github.com/busyloop/lolcat)
+  *Colorize terminal output with rainbow text.*  
+  **Usage:** `echo "Hello" | lolcat`  
+  **Docs:** [lolcat on GitHub](https://github.com/busyloop/lolcat)
   
 - **neofetch**  
-  *Display system information with an aesthetic layout in the terminal.*  
-  Documentation: [neofetch on GitHub](https://github.com/dylanaraps/neofetch)
+  *Display system information in a visually appealing layout.*  
+  **Usage:** `neofetch`  
+  **Docs:** [neofetch on GitHub](https://github.com/dylanaraps/neofetch)
   
 - **pipes-sh**  
-  *An animated terminal screensaver that draws moving pipes.*  
-  Documentation: [pipes.sh on GitHub](https://github.com/justinmeiners/pipes.sh)
+  *Animated terminal screensaver that draws moving pipes.*  
+  **Usage:** `pipes-sh`  
+  **Docs:** [pipes-sh on GitHub](https://github.com/justinmeiners/pipes.sh)
   
 - **pv**  
-  *Monitor the progress of data through a pipeline with a visual progress bar.*  
-  Documentation: [pv Manual](https://linux.die.net/man/1/pv)
+  *Monitor data through a pipeline with a progress bar.*  
+  **Usage:** `pv file.iso > /dev/null`  
+  **Docs:** [pv Manual](https://linux.die.net/man/1/pv)
 
 ---
 
-### Software Development Applications
+## Software Development Applications
 
 - **android-studio**  
-  *IDE for Android development with a complete suite of development tools.*  
-  Documentation: [Android Studio Documentation](https://developer.android.com/studio)
+  *IDE for Android development.*  
+  **Usage:** Launch via Applications  
+  **Docs:** [Android Studio Documentation](https://developer.android.com/studio)
   
 - **gradle**  
-  *Build automation tool popular for Java projects.*  
-  Documentation: [Gradle Documentation](https://docs.gradle.org/)
+  *Build automation tool for Java projects.*  
+  **Usage:** `gradle build`  
+  **Docs:** [Gradle Documentation](https://docs.gradle.org/)
   
 - **iterm2**  
-  *Feature-rich terminal emulator for macOS with advanced customizations.*  
-  Documentation: [iTerm2 Documentation](https://iterm2.com/documentation.html)
+  *Feature-rich terminal emulator for macOS.*  
+  **Usage:** Launch iTerm2 from Applications  
+  **Docs:** [iTerm2 Documentation](https://iterm2.com/documentation.html)
   
 - **postman**  
-  *Comprehensive API development and testing tool.*  
-  Documentation: [Postman Docs](https://learning.postman.com/)
+  *API development and testing tool.*  
+  **Usage:** Launch Postman from Applications  
+  **Docs:** [Postman Docs](https://learning.postman.com/)
   
 - **sourcetree**  
-  *Visual Git client that simplifies version control operations.*  
-  Documentation: [SourceTree Documentation](https://www.sourcetreeapp.com/)
+  *Graphical Git client for managing repositories.*  
+  **Usage:** Launch Sourcetree from Applications  
+  **Docs:** [SourceTree Documentation](https://www.sourcetreeapp.com/)
   
 - **visual-studio-code**  
-  *Lightweight yet powerful code editor with extensive extension support.*  
-  Documentation: [VS Code Docs](https://code.visualstudio.com/docs)
+  *Extensible code editor with integrated terminal and debugging.*  
+  **Usage:** `code .`  
+  **Docs:** [VS Code Docs](https://code.visualstudio.com/docs)
 
 ---
 
-### Development Languages & SDKs
+## Development Languages & SDKs
 
 - **gcc**  
-  *GNU Compiler Collection for C/C++ and other languages.*  
-  Documentation: [GCC Online Docs](https://gcc.gnu.org/onlinedocs/)
+  *GNU Compiler Collection for C/C++ and more.*  
+  **Usage:** `gcc --version`  
+  **Docs:** [GCC Online Docs](https://gcc.gnu.org/onlinedocs/)
   
 - **go**  
-  *Programming language designed for simplicity and efficiency.*  
-  Documentation: [Go Docs](https://golang.org/doc/)
+  *Programming language optimized for simplicity and efficiency.*  
+  **Usage:** `go run main.go`  
+  **Docs:** [Go Docs](https://golang.org/doc/)
   
 - **lua**  
-  *Lightweight scripting language used in embedded systems and games.*  
-  Documentation: [Lua 5.4 Manual](https://www.lua.org/manual/5.4/)
+  *Lightweight scripting language for embedded use.*  
+  **Usage:** `lua script.lua`  
+  **Docs:** [Lua 5.4 Manual](https://www.lua.org/manual/5.4/)
   
 - **luarocks**  
   *Package manager for Lua modules.*  
-  Documentation: [LuaRocks Documentation](https://luarocks.org/)
+  **Usage:** `luarocks install module`  
+  **Docs:** [LuaRocks Documentation](https://luarocks.org/)
   
 - **node**  
   *JavaScript runtime built on Chrome's V8 engine.*  
-  Documentation: [Node.js Documentation](https://nodejs.org/en/docs/)
+  **Usage:** `node app.js`  
+  **Docs:** [Node.js Documentation](https://nodejs.org/en/docs/)
   
 - **nvm**  
-  *Tool for managing multiple Node.js versions.*  
-  Documentation: [nvm on GitHub](https://github.com/nvm-sh/nvm)
+  *Manage multiple versions of Node.js.*  
+  **Usage:** `nvm ls`  
+  **Docs:** [nvm on GitHub](https://github.com/nvm-sh/nvm)
   
 - **openjdk**  
-  *Open-source implementation of the Java Platform.*  
-  Documentation: [OpenJDK Docs](https://openjdk.java.net/)
+  *Open-source Java Development Kit.*  
+  **Usage:** `java -version`  
+  **Docs:** [OpenJDK Docs](https://openjdk.java.net/)
   
 - **python**  
-  *Popular programming language known for its simplicity and readability.*  
-  Documentation: [Python Docs](https://docs.python.org/3/)
+  *Popular high-level programming language.*  
+  **Usage:** `python3 --version`  
+  **Docs:** [Python Docs](https://docs.python.org/3/)
   
 - **rust**  
   *Systems programming language focused on safety and performance.*  
-  Documentation: [Rust Book](https://doc.rust-lang.org/book/)
+  **Usage:** `cargo new my_project`  
+  **Docs:** [Rust Book](https://doc.rust-lang.org/book/)
 
 ---
 
-### DevOps
+## DevOps
 
 - **ansible**  
   *Automation tool for configuration management and deployment.*  
-  Documentation: [Ansible Documentation](https://docs.ansible.com/)
+  **Usage:** `ansible --version`  
+  **Docs:** [Ansible Documentation](https://docs.ansible.com/)
   
 - **docker**  
-  *Platform for developing, shipping, and running applications in containers.*  
-  Documentation: [Docker Docs](https://docs.docker.com/)
+  *Platform for building, shipping, and running containerized apps.*  
+  **Usage:** `docker run hello-world`  
+  **Docs:** [Docker Docs](https://docs.docker.com/)
 
 ---
 
-### Development Utilities
+## Development Utilities
 
 - **gh**  
-  *Official GitHub CLI for managing GitHub resources from the terminal.*  
-  Documentation: [GitHub CLI Manual](https://cli.github.com/manual/)
+  *GitHub CLI for managing repositories and issues.*  
+  **Usage:** `gh repo list`  
+  **Docs:** [GitHub CLI Manual](https://cli.github.com/manual/)
   
 - **git-extras**  
-  *Adds a variety of helpful Git utilities and commands.*  
-  Documentation: [git-extras on GitHub](https://github.com/tj/git-extras)
+  *Collection of additional Git commands.*  
+  **Usage:** `git summary`  
+  **Docs:** [git-extras on GitHub](https://github.com/tj/git-extras)
   
 - **scrcpy**  
-  *Display and control Android devices connected via USB.*  
-  Documentation: [scrcpy on GitHub](https://github.com/Genymobile/scrcpy)
+  *Display and control Android devices via USB.*  
+  **Usage:** `scrcpy`  
+  **Docs:** [scrcpy on GitHub](https://github.com/Genymobile/scrcpy)
   
 - **terminal-notifier**  
-  *Send macOS notifications from the command line.*  
-  Documentation: [terminal-notifier on GitHub](https://github.com/julienXX/terminal-notifier)
+  *Send notifications from the command line to macOS Notification Center.*  
+  **Usage:** `terminal-notifier -message "Hello"`  
+  **Docs:** [terminal-notifier on GitHub](https://github.com/julienXX/terminal-notifier)
   
 - **tig**  
-  *Text-mode interface for Git to view history interactively.*  
-  Documentation: [tig Documentation](https://jonas.github.io/tig/)
+  *Interactive text-mode interface for browsing Git history.*  
+  **Usage:** `tig`  
+  **Docs:** [tig Documentation](https://jonas.github.io/tig/)
   
 - **ttygif**  
   *Convert terminal sessions into animated GIFs.*  
-  Documentation: [ttygif on GitHub](https://github.com/icholy/ttygif)
+  **Usage:** `ttygif session.cast`  
+  **Docs:** [ttygif on GitHub](https://github.com/icholy/ttygif)
   
 - **watchman**  
-  *Watches files and records when they change, useful for triggering builds.*  
-  Documentation: [Watchman Docs](https://facebook.github.io/watchman/)
+  *Monitor file changes and trigger actions.*  
+  **Usage:** `watchman watch .`  
+  **Docs:** [Watchman Docs](https://facebook.github.io/watchman/)
 
 ---
 
-### Network and Security Testing
+## Network and Security Testing
 
 - **bettercap**  
-  *Comprehensive network attack and monitoring tool.*  
-  Documentation: [Bettercap Docs](https://www.bettercap.org/)
+  *Network monitoring and attack tool.*  
+  **Usage:** `bettercap -h`  
+  **Docs:** [Bettercap Docs](https://www.bettercap.org/)
   
 - **nmap**  
-  *Powerful network discovery and security auditing tool.*  
-  Documentation: [Nmap Book](https://nmap.org/book/man.html)
+  *Network discovery and security auditing tool.*  
+  **Usage:** `nmap -sV example.com`  
+  **Docs:** [Nmap Book](https://nmap.org/book/man.html)
   
 - **wrk**  
-  *Modern HTTP benchmarking tool capable of generating high load.*  
-  Documentation: [wrk on GitHub](https://github.com/wg/wrk)
+  *HTTP benchmarking tool to test server performance.*  
+  **Usage:** `wrk -t2 -c100 -d30s http://example.com`  
+  **Docs:** [wrk on GitHub](https://github.com/wg/wrk)
   
 - **burp-suite**  
-  *Integrated platform for performing security testing of web applications.*  
-  Documentation: [Burp Suite Docs](https://portswigger.net/burp/documentation)
+  *Integrated platform for web security testing.*  
+  **Usage:** Launch from Applications  
+  **Docs:** [Burp Suite Docs](https://portswigger.net/burp/documentation)
   
 - **owasp-zap**  
-  *Open-source web application security scanner.*  
-  Documentation: [OWASP ZAP User Guide](https://www.zaproxy.org/docs/)
+  *Open-source web app security scanner.*  
+  **Usage:** Launch from Applications  
+  **Docs:** [OWASP ZAP User Guide](https://www.zaproxy.org/docs/)
   
 - **wireshark**  
-  *Network protocol analyzer for capturing and interactively browsing traffic.*  
-  Documentation: [Wireshark Docs](https://www.wireshark.org/docs/)
+  *Capture and analyze network packets.*  
+  **Usage:** Launch from Applications  
+  **Docs:** [Wireshark Docs](https://www.wireshark.org/docs/)
 
 ---
 
-### Security Utilities and Encryption
+## Security Utilities and Encryption
 
 - **bcrypt**  
-  *Tool for password hashing using the Blowfish algorithm.*  
-  Documentation: [bcrypt Info](https://www.openwall.com/crypt/)
+  *Tool for hashing passwords using the Blowfish algorithm.*  
+  **Usage:** Typically used in scripts/libraries  
+  **Docs:** [bcrypt Info](https://www.openwall.com/crypt/)
   
 - **borgbackup**  
-  *Efficient and secure deduplicating backup program.*  
-  Documentation: [BorgBackup Docs](https://borgbackup.readthedocs.io/)
+  *Efficient, encrypted, deduplicating backup solution.*  
+  **Usage:** `borg init --encryption=repokey /path/to/repo`  
+  **Docs:** [BorgBackup Docs](https://borgbackup.readthedocs.io/)
   
 - **clamav**  
-  *Open-source antivirus engine for detecting viruses and malware.*  
-  Documentation: [ClamAV Docs](https://www.clamav.net/documents)
+  *Open-source antivirus for scanning files.*  
+  **Usage:** `clamscan file.txt`  
+  **Docs:** [ClamAV Docs](https://www.clamav.net/documents)
   
 - **dnscrypt-proxy**  
-  *Secure your DNS traffic by encrypting DNS queries.*  
-  Documentation: [dnscrypt-proxy Wiki](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
+  *Encrypts DNS queries for improved privacy.*  
+  **Usage:** Configure its config file and run `dnscrypt-proxy`  
+  **Docs:** [dnscrypt-proxy Wiki](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
   
 - **gpg-suite**  
-  *Tools for email and file encryption using GPG on macOS.*  
-  Documentation: [GPG Suite Docs](https://gpgtools.org/documentation/)
+  *GPG tools for encrypting files and communications on macOS.*  
+  **Usage:** `gpg --encrypt -r recipient file.txt`  
+  **Docs:** [GPG Suite Docs](https://gpgtools.org/documentation/)
   
 - **git-crypt**  
-  *Transparent file encryption for Git repositories.*  
-  Documentation: [git-crypt on GitHub](https://github.com/AGWA/git-crypt)
+  *Transparent encryption for Git repositories.*  
+  **Usage:** `git-crypt status`  
+  **Docs:** [git-crypt on GitHub](https://github.com/AGWA/git-crypt)
   
 - **lynis**  
-  *Security auditing tool for Unix-based systems.*  
-  Documentation: [Lynis Documentation](https://cisofy.com/lynis/)
+  *Security auditing tool for Unix systems.*  
+  **Usage:** `lynis audit system`  
+  **Docs:** [Lynis Documentation](https://cisofy.com/lynis/)
   
 - **openssl**  
-  *Robust toolkit for SSL/TLS and cryptographic functions.*  
-  Documentation: [OpenSSL Docs](https://www.openssl.org/docs/)
+  *Toolkit for SSL/TLS and cryptography.*  
+  **Usage:** `openssl version`  
+  **Docs:** [OpenSSL Docs](https://www.openssl.org/docs/)
   
 - **rkhunter**  
-  *Detects potential rootkits and security vulnerabilities on your system.*  
-  Documentation: [rkhunter Official Site](http://rkhunter.sourceforge.net/)
+  *Scan for potential rootkits on your system.*  
+  **Usage:** `rkhunter --check`  
+  **Docs:** [rkhunter Official Site](http://rkhunter.sourceforge.net/)
   
 - **veracrypt**  
-  *Open-source disk encryption software for secure data storage.*  
-  Documentation: [VeraCrypt Documentation](https://www.veracrypt.fr/en/Documentation.html)
+  *Disk encryption software for securing sensitive data.*  
+  **Usage:** Launch VeraCrypt from Applications and follow the GUI  
+  **Docs:** [VeraCrypt Documentation](https://www.veracrypt.fr/en/Documentation.html)
 
 ---
 
-### Desktop Applications – Creativity
+## Desktop Applications – Creativity
 
 - **audacity**  
-  *Free, open-source audio editor for recording and editing sounds.*  
-  Documentation: [Audacity Manual](https://www.audacityteam.org/help/)
+  *Audio editor and recorder.*  
+  **Usage:** Launch Audacity from Applications  
+  **Docs:** [Audacity Manual](https://www.audacityteam.org/help/)
   
 - **gimp**  
-  *Powerful image editor often considered a free alternative to Photoshop.*  
-  Documentation: [GIMP Documentation](https://docs.gimp.org/)
+  *Image editor (free alternative to Photoshop).*  
+  **Usage:** Launch GIMP from Applications  
+  **Docs:** [GIMP Documentation](https://docs.gimp.org/)
   
 - **handbrake**  
-  *Video transcoder for converting media files to various formats.*  
-  Documentation: [HandBrake Docs](https://handbrake.fr/docs/en/latest/)
+  *Video transcoder for converting media files.*  
+  **Usage:** Launch HandBrake from Applications  
+  **Docs:** [HandBrake Docs](https://handbrake.fr/docs/en/latest/)
   
 - **inkscape**  
-  *Vector graphics editor for creating and editing scalable designs.*  
-  Documentation: [Inkscape Learn](https://inkscape.org/learn/)
+  *Vector graphics editor for scalable designs.*  
+  **Usage:** Launch Inkscape from Applications  
+  **Docs:** [Inkscape Learn](https://inkscape.org/learn/)
   
 - **obs**  
-  *Screencasting software for recording and live streaming.*  
-  Documentation: [OBS Wiki](https://obsproject.com/wiki)
+  *Screencasting and live streaming software.*  
+  **Usage:** Launch OBS from Applications  
+  **Docs:** [OBS Wiki](https://obsproject.com/wiki)
   
 - **shotcut**  
-  *Open-source video editor with a broad format support.*  
-  Documentation: [Shotcut Tutorials](https://shotcut.org/tutorials/)
+  *Open-source video editor.*  
+  **Usage:** Launch Shotcut from Applications  
+  **Docs:** [Shotcut Tutorials](https://shotcut.org/tutorials/)
 
 ---
 
-### Desktop Applications – Media
+## Desktop Applications – Media
 
 - **calibre**  
-  *E-book management software for organizing and reading digital books.*  
-  Documentation: [Calibre Manual](https://manual.calibre-ebook.com/)
+  *E-book management and reader application.*  
+  **Usage:** Launch Calibre from Applications  
+  **Docs:** [Calibre Manual](https://manual.calibre-ebook.com/)
   
 - **spotify**  
-  *Streaming music service with a dedicated macOS app.*  
-  Documentation: [Spotify Support](https://support.spotify.com/)
+  *Music streaming service with a dedicated macOS app.*  
+  **Usage:** Launch Spotify from Applications  
+  **Docs:** [Spotify Support](https://support.spotify.com/)
   
 - **transmission**  
-  *Lightweight BitTorrent client for downloading torrents.*  
-  Documentation: [Transmission Help](https://transmissionbt.com/help/)
+  *Torrent client for downloading files.*  
+  **Usage:** Launch Transmission from Applications  
+  **Docs:** [Transmission Help](https://transmissionbt.com/help/)
   
 - **vlc**  
-  *Versatile media player supporting a wide range of audio and video formats.*  
-  Documentation: [VLC Documentation](https://www.videolan.org/doc/)
+  *Versatile media player for various formats.*  
+  **Usage:** Launch VLC from Applications  
+  **Docs:** [VLC Documentation](https://www.videolan.org/doc/)
   
 - **pandoc**  
-  *Universal document converter for transforming files between formats.*  
-  Documentation: [Pandoc Manual](https://pandoc.org/MANUAL.html)
+  *Universal document converter.*  
+  **Usage:** `pandoc input.md -o output.pdf`  
+  **Docs:** [Pandoc Manual](https://pandoc.org/MANUAL.html)
   
 - **yt-dlp**  
-  *Enhanced YouTube downloader that supersedes youtube-dl in features.*  
-  Documentation: [yt-dlp on GitHub](https://github.com/yt-dlp/yt-dlp#readme)
+  *Video downloader with enhanced features.*  
+  **Usage:** `yt-dlp URL`  
+  **Docs:** [yt-dlp on GitHub](https://github.com/yt-dlp/yt-dlp#readme)
 
 ---
 
-### Desktop Applications – Personal
+## Desktop Applications – Personal
 
 - **1password**  
-  *Secure password manager that stores and autofills your credentials.*  
-  Documentation: [1Password Support](https://support.1password.com/)
+  *Password manager for secure credential storage.*  
+  **Usage:** Launch 1Password from Applications  
+  **Docs:** [1Password Support](https://support.1password.com/)
   
 - **standard-notes**  
-  *Encrypted note-taking application that syncs across devices.*  
-  Documentation: [Standard Notes Docs](https://docs.standardnotes.com/)
+  *Encrypted note-taking app that syncs across devices.*  
+  **Usage:** Launch Standard Notes from Applications  
+  **Docs:** [Standard Notes Docs](https://docs.standardnotes.com/)
   
 - **signal**  
-  *Privacy-focused messaging app for secure communication.*  
-  Documentation: [Signal Docs](https://signal.org/docs/)
+  *Secure messaging and calling app.*  
+  **Usage:** Launch Signal from Applications  
+  **Docs:** [Signal Docs](https://signal.org/docs/)
   
 - **ledger-live**  
-  *Manager for Ledger hardware wallets to monitor and manage cryptocurrencies.*  
-  Documentation: [Ledger Live Support](https://support.ledger.com/hc/en-us)
+  *Manage your Ledger hardware wallet and crypto assets.*  
+  **Usage:** Launch Ledger Live from Applications  
+  **Docs:** [Ledger Live Support](https://support.ledger.com/hc/en-us)
   
 - **mountain-duck**  
-  *Mount remote storage locations as local drives for easy access.*  
-  Documentation: [Mountain Duck Docs](https://mountainduck.io/documentation/)
+  *Mount remote storage as a local drive.*  
+  **Usage:** Launch Mountain Duck from Applications  
+  **Docs:** [Mountain Duck Docs](https://mountainduck.io/documentation/)
   
 - **protonmail-bridge**  
-  *Enables the use of ProtonMail with traditional email clients via local decryption.*  
-  Documentation: [ProtonMail Bridge](https://protonmail.com/bridge)
+  *Integrate ProtonMail with desktop email clients.*  
+  **Usage:** Launch ProtonMail Bridge from Applications  
+  **Docs:** [ProtonMail Bridge](https://protonmail.com/bridge)
   
 - **protonvpn**  
-  *VPN client offering strong privacy and security for your connection.*  
-  Documentation: [ProtonVPN Support](https://protonvpn.com/support/)
+  *VPN client for secure internet browsing.*  
+  **Usage:** Launch ProtonVPN from Applications  
+  **Docs:** [ProtonVPN Support](https://protonvpn.com/support/)
   
 - **vorta**  
-  *Graphical frontend for BorgBackup that simplifies encrypted backups.*  
-  Documentation: [Vorta Docs](https://vorta.readthedocs.io/)
+  *Graphical frontend for encrypted BorgBackup.*  
+  **Usage:** Launch Vorta from Applications  
+  **Docs:** [Vorta Docs](https://vorta.readthedocs.io/)
 
 ---
 
-### Desktop Applications – Browsers
+## Desktop Applications – Browsers
 
 - **firefox**  
-  *Privacy-oriented web browser with extensive customization options.*  
-  Documentation: [Firefox Support](https://support.mozilla.org/en-US/products/firefox)
+  *Privacy-focused web browser with extensive add-ons.*  
+  **Usage:** Launch Firefox from Applications  
+  **Docs:** [Firefox Support](https://support.mozilla.org/en-US/products/firefox)
   
 - **chromium**  
-  *Open-source browser project that forms the basis for many modern browsers.*  
-  Documentation: [Chromium Project](https://www.chromium.org/Home)
+  *Open-source web browser for a customizable experience.*  
+  **Usage:** Launch Chromium from Applications  
+  **Docs:** [Chromium Project](https://www.chromium.org/Home)
 
 ---
 
-### macOS-Specific
-
-#### Fonts
+## macOS-Specific – Fonts
 
 - **font-fira-code**  
-  *Monospaced programming font with ligatures.*  
-  Documentation: [Fira Code on GitHub](https://github.com/tonsky/FiraCode)
+  *Programming font with ligatures for cleaner code.*  
+  **Usage:** Install via Homebrew and select in your editor  
+  **Docs:** [Fira Code on GitHub](https://github.com/tonsky/FiraCode)
   
 - **font-hack**  
-  *A free, open-source font for source code with a modern look.*  
-  Documentation: [Hack Font](https://sourcefoundry.org/hack/)
+  *Modern, open-source font for source code.*  
+  **Usage:** Install and configure in your IDE or terminal  
+  **Docs:** [Hack Font](https://sourcefoundry.org/hack/)
   
 - **font-inconsolata**  
-  *A monospaced font designed for code listings and terminal use.*  
-  Documentation: [Inconsolata on Google Fonts](https://fonts.google.com/specimen/Inconsolata)
+  *Monospaced font optimized for code listings and terminals.*  
+  **Usage:** Install and use in your editor  
+  **Docs:** [Inconsolata on Google Fonts](https://fonts.google.com/specimen/Inconsolata)
   
 - **font-meslo-lg-nerd-font**  
-  *Enhanced version of Meslo for use with nerd icons in terminals.*  
-  Documentation: [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+  *Enhanced Meslo font with additional glyphs for icons.*  
+  **Usage:** Install and set as your terminal font (e.g., in iTerm2)  
+  **Docs:** [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
-#### Quick-Look Plugins
+---
+
+## macOS-Specific – Quick-Look Plugins
+
+*Preview files in Finder by selecting a file and pressing the spacebar.*
 
 - **qlcolorcode**  
-  *Adds syntax highlighting for code in Quick Look previews.*  
-  Documentation: [qlcolorcode on GitHub](https://github.com/anthonygelibert/qlcolorcode)
+  **Docs:** [qlcolorcode on GitHub](https://github.com/anthonygelibert/qlcolorcode)
   
 - **qlimagesize**  
-  *Displays image dimensions in Quick Look.*  
-  Documentation: [qlimagesize on GitHub](https://github.com/Nyx0uf/qlimagesize)
+  **Docs:** [qlimagesize on GitHub](https://github.com/Nyx0uf/qlimagesize)
   
 - **qlmarkdown**  
-  *Quick Look plugin for rendering Markdown files.*  
-  Documentation: [qlmarkdown on GitHub](https://github.com/toland/qlmarkdown)
+  **Docs:** [qlmarkdown on GitHub](https://github.com/toland/qlmarkdown)
   
 - **qlprettypatch**  
-  *Renders patch/diff files in a more readable format in Quick Look.*  
-  Documentation: [qlprettypatch on GitHub](https://github.com/phinze/qlprettypatch)
+  **Docs:** [qlprettypatch on GitHub](https://github.com/phinze/qlprettypatch)
   
 - **qlstephen**  
-  *Quick Look plugin for plain text files without file extensions.*  
-  Documentation: [qlstephen on GitHub](https://github.com/whomwah/qlstephen)
+  **Docs:** [qlstephen on GitHub](https://github.com/whomwah/qlstephen)
   
 - **qlvideo**  
-  *Enables video file previews in Quick Look.*  
-  Documentation: [QLVideo on GitHub](https://github.com/Marginal/QLVideo)
+  **Docs:** [QLVideo on GitHub](https://github.com/Marginal/QLVideo)
   
 - **quicklook-csv**  
-  *Renders CSV files as tables in Quick Look.*  
-  Documentation: [quicklook-csv on GitHub](https://github.com/phuox/quicklook-csv)
+  **Docs:** [quicklook-csv on GitHub](https://github.com/phuox/quicklook-csv)
   
 - **quicklook-json**  
-  *Displays JSON files in a tree view in Quick Look.*  
-  Documentation: [quicklook-json on GitHub](https://github.com/sindresorhus/quick-look-plugins#quicklookjson)
+  **Docs:** [quicklook-json on GitHub](https://github.com/sindresorhus/quick-look-plugins#quicklookjson)
   
 - **quicklookapk**  
-  *Allows previewing of Android APK files via Quick Look.*  
-  Documentation: [quicklookapk on GitHub](https://github.com/limpoxe/quicklookapk)
+  **Docs:** [quicklookapk on GitHub](https://github.com/limpoxe/quicklookapk)
   
 - **webpquicklook**  
-  *Enables Quick Look support for WebP image files.*  
-  Documentation: [webpquicklook on GitHub](https://github.com/emin/WebPQuickLook)
+  **Docs:** [webpquicklook on GitHub](https://github.com/emin/WebPQuickLook)
 
-#### macOS Mods & Improvements
+---
+
+## macOS-Specific – Mods & Improvements
 
 - **alt-tab**  
-  *Improved alt-tab window switcher for macOS.*  
-  Documentation: [alt-tab Website](https://alt-tab-macos.netlify.app/)
+  *Improved window switcher for macOS.*  
+  **Usage:** Press Alt+Tab  
+  **Docs:** [alt-tab Website](https://alt-tab-macos.netlify.app/)
   
 - **anybar**  
-  *Customizable menubar indicator for notifications and statuses.*  
-  Documentation: [AnyBar on GitHub](https://github.com/tonsky/AnyBar)
+  *Customizable menubar indicator.*  
+  **Usage:** `anybar`  
+  **Docs:** [AnyBar on GitHub](https://github.com/tonsky/AnyBar)
   
 - **copyq**  
-  *Advanced clipboard manager with editing and scripting features.*  
-  Documentation: [CopyQ Documentation](https://hluk.github.io/CopyQ/)
+  *Advanced clipboard manager with scripting support.*  
+  **Usage:** `copyq show`  
+  **Docs:** [CopyQ Documentation](https://hluk.github.io/CopyQ/)
   
 - **espanso**  
-  *Text expander that replaces shortcuts with full text snippets.*  
-  Documentation: [Espanso Docs](https://espanso.org/docs/)
+  *Text expander to automatically replace shortcuts with snippets.*  
+  **Usage:** Type your defined trigger to see the expansion  
+  **Docs:** [Espanso Docs](https://espanso.org/docs/)
   
 - **finicky**  
-  *Custom browser chooser that directs links to specified browsers.*  
-  Documentation: [Finicky on GitHub](https://johnste.github.io/finicky/)
+  *Custom browser chooser to control which links open in which browser.*  
+  **Usage:** Configure via `~/.finicky.js`  
+  **Docs:** [Finicky on GitHub](https://johnste.github.io/finicky/)
   
 - **hiddenbar**  
-  *Hide unwanted menubar icons to declutter your workspace.*  
-  Documentation: [HiddenBar on GitHub](https://github.com/dwarvesf/hiddenbar)
+  *Hide unwanted menubar icons for a cleaner workspace.*  
+  **Usage:** Launch HiddenBar and adjust settings via its UI  
+  **Docs:** [HiddenBar on GitHub](https://github.com/dwarvesf/hiddenbar)
   
 - **iproute2mac**  
-  *Provides network management commands similar to Linux’s iproute2.*  
-  Documentation: [iproute2mac on GitHub](https://github.com/brona/iproute2mac)
+  *Linux-like networking commands for macOS.*  
+  **Usage:** `ip a`  
+  **Docs:** [iproute2mac on GitHub](https://github.com/brona/iproute2mac)
   
 - **lporg**  
-  *Utility to backup and restore your Launchpad layout.*  
-  Documentation: [lporg on GitHub](https://github.com/0x0I/lporg)
+  *Backup and restore your Launchpad layout.*  
+  **Usage:** `lporg`  
+  **Docs:** [lporg on GitHub](https://github.com/0x0I/lporg)
   
 - **m-cli**  
-  *All-in-one CLI for managing various macOS features.*  
-  Documentation: [m-cli on GitHub](https://github.com/jacobsalmela/m-cli)
+  *All-in-one CLI tool for managing macOS features.*  
+  **Usage:** `m-cli help`  
+  **Docs:** [m-cli on GitHub](https://github.com/jacobsalmela/m-cli)
   
 - **openinterminal**  
-  *Quickly open a terminal window in the current Finder directory.*  
-  Documentation: [openinterminal on GitHub](https://github.com/JamieMason/openinterminal)
+  *Open Terminal in the current Finder directory.*  
+  **Usage:** Right-click in Finder → "Open in Terminal"  
+  **Docs:** [openinterminal on GitHub](https://github.com/JamieMason/openinterminal)
   
 - **raycast**  
-  *Powerful Spotlight replacement with extensive integrations.*  
-  Documentation: [Raycast Documentation](https://docs.raycast.com/)
+  *Spotlight replacement with productivity features and integrations.*  
+  **Usage:** Press the Raycast shortcut (default Cmd+Space)  
+  **Docs:** [Raycast Documentation](https://docs.raycast.com/)
   
 - **santa**  
-  *Binary authorization tool for enhanced security on macOS.*  
-  Documentation: (Check [Santa on GitHub](https://github.com/google/santa) or related documentation)
+  *Tool for binary authorization on macOS (security measure).*  
+  **Usage:** Configure via its admin interface  
+  **Docs:** [Santa on GitHub](https://github.com/google/santa)
   
 - **shottr**  
-  *Fast and lightweight screenshot tool for macOS.*  
-  Documentation: [Shottr Docs](https://shottr.cc/docs)
+  *Lightweight screenshot utility with annotation features.*  
+  **Usage:** Launch Shottr from Applications  
+  **Docs:** [Shottr Docs](https://shottr.cc/docs)
   
 - **skhd**  
-  *Hotkey daemon for macOS that allows you to define custom shortcuts.*  
-  Documentation: [skhd on GitHub](https://github.com/koekeishiya/skhd)
+  *Hotkey daemon to set up custom global shortcuts on macOS.*  
+  **Usage:** `skhd -V`  
+  **Docs:** [skhd on GitHub](https://github.com/koekeishiya/skhd)
   
 - **stats**  
-  *Menubar application to monitor system resources like CPU and memory.*  
-  Documentation: [Stats on GitHub](https://github.com/exelban/stats)
+  *Display system metrics (CPU, memory, etc.) in your menubar.*  
+  **Usage:** Launch Stats from Applications  
+  **Docs:** [Stats on GitHub](https://github.com/exelban/stats)
   
 - **yabai**  
-  *Tiling window manager for macOS to organize your workspace automatically.*  
-  Documentation: [yabai on GitHub](https://github.com/koekeishiya/yabai)
+  *Tiling window manager for macOS to automatically organize windows.*  
+  **Usage:** `yabai -m query --windows`  
+  **Docs:** [yabai on GitHub](https://github.com/koekeishiya/yabai)
 
-#### Utility Apps
+---
+
+## macOS-Specific – Utility Apps
 
 - **coteditor**  
-  *A lightweight, feature-rich plain-text editor for macOS.*  
-  Documentation: [CotEditor Official Site](https://coteditor.com/)
+  *Simple, lightweight text editor for macOS.*  
+  **Usage:** Launch CotEditor from Applications  
+  **Docs:** [CotEditor Official Site](https://coteditor.com/)
   
 - **little-snitch**  
-  *Monitors and controls outgoing network traffic for enhanced security.*  
-  Documentation: [Little Snitch Manual](https://www.obdev.at/products/littlesnitch/index.html)
+  *Monitor and control outgoing network connections.*  
+  **Usage:** Open Little Snitch dashboard  
+  **Docs:** [Little Snitch Manual](https://www.obdev.at/products/littlesnitch/index.html)
   
 - **keka**  
-  *File archiver and extractor supporting a variety of compression formats.*  
-  Documentation: [Keka Documentation](https://www.keka.io/en/)
-  
+  *File archiver and extractor supporting many formats.*  
+  **Usage:** Right-click file → Compress/Extract with Keka  
+  **Docs:** [Keka Documentation](https://www.keka.io/en/)
+
+---
+
+*End of Document*
