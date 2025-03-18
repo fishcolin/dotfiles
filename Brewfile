@@ -113,6 +113,8 @@ cask "iterm2"           # Enhanced terminal emulator
 cask "postman"          # API testing tool
 # cask "sourcetree"       # Git GUI client
 cask "visual-studio-code"  # Code editor
+brew "sublime-text"        # Advanced text editor for code and prose (Sublime Text 3)
+
 
 #############################################################
 # Development Languages & SDKs
@@ -133,6 +135,7 @@ brew "rust"             # Rust language
 #############################################################
 brew "ansible"          # Automation tool
 brew "docker"           # Container platform
+brew "colima"           # Lightweight container runtime for macOS using Lima
 
 #############################################################
 # Development Utilities
