@@ -7,14 +7,12 @@
 cask_args appdir: '~/Applications', require_sha: true
 
 # Taps
-tap "homebrew/core"
 tap "homebrew/services"
 tap "browsh-org/homebrew-browsh"
 tap "espanso/espanso"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "kdash-rs/kdash"
-tap "homebrew/cask-fonts"
 
 #############################################################
 # Command Line Essentials
@@ -34,7 +32,6 @@ brew "ctags"            # Code indexing
 brew "diff-so-fancy"    # Improved diff output
 brew "duf"              # Disk usage info
 brew "entr"             # Run commands on file changes
-brew "exa"              # Enhanced ls
 brew "exiftool"         # Image metadata tool
 brew "fzf"              # Fuzzy finder
 brew "hyperfine"        # Benchmarking tool
@@ -59,7 +56,6 @@ brew "zoxide"           # Smarter directory navigation
 #############################################################
 brew "bmon"             # Bandwidth monitor
 brew "ctop"             # Container metrics
-brew "dog"              # DNS lookup tool
 brew "bpytop"           # Resource monitor
 brew "dua-cli"          # Disk usage analyzer
 brew "glances"          # System monitor
@@ -71,7 +67,6 @@ brew "speedtest-cli"    # Internet speed test
 # CLI Productivity Apps
 #############################################################
 brew "aspell"           # Spell checker
-brew "browsh"           # Terminal web browser
 # brew "buku"             # Bookmark manager
 # brew "cmus"             # Console music player
 # brew "cointop"          # Crypto portfolio viewer
@@ -89,7 +84,6 @@ brew "ddgr"             # DuckDuckGo search in terminal
 brew "httpie"           # HTTP client for API testing
 brew "lazydocker"       # Docker management
 brew "lazygit"          # Git management
-brew "kdash"            # Kubernetes dashboard
 
 #############################################################
 # CLI External Services
@@ -213,7 +207,6 @@ cask "nordvpn"            # VPN client
 # Desktop Applications - Browsers
 #############################################################
 cask "firefox"
-cask "chromium"
 # cask "orion"         # Excluded: Niche/outdated browser
 
 #############################################################
@@ -223,7 +216,6 @@ cask "chromium"
 # Fonts
 cask "font-fira-code"
 cask "font-hack"
-cask "font-inconsolata"
 cask "font-meslo-lg-nerd-font"
 
 # Quick-Look Plugins
