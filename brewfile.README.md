@@ -387,6 +387,11 @@ Use this document as a reference when configuring or troubleshooting your develo
   **Usage:** `code .`  
   **Docs:** [VS Code Docs](https://code.visualstudio.com/docs)
 
+- **sublime-text**  
+  *A powerful, lightweight text editor optimized for coding, markup, and prose. (Note: The official cask now installs the latest version, so if you specifically require Sublime Text 3, you may need to seek an alternative installation method.)*  
+  **Usage:** Launch via the `subl` command in your terminal (after proper configuration) or via the app icon.  
+  **Docs:** [Sublime Text Documentation](https://www.sublimetext.com/docs/)
+
 ---
 
 ## Development Languages & SDKs
@@ -449,6 +454,11 @@ Use this document as a reference when configuring or troubleshooting your develo
   *Platform for building, shipping, and running containerized apps.*  
   **Usage:** `docker run hello-world`  
   **Docs:** [Docker Docs](https://docs.docker.com/)
+
+- **colima**  
+  *Lightweight alternative to Docker Desktop for running Docker containers on macOS via a Linux VM powered by Lima.*  
+  **Usage:** `colima start`  
+  **Docs:** [Colima GitHub](https://github.com/abiosoft/colima)
 
 ---
 
