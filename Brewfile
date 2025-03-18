@@ -113,7 +113,7 @@ cask "iterm2"           # Enhanced terminal emulator
 cask "postman"          # API testing tool
 # cask "sourcetree"       # Git GUI client
 cask "visual-studio-code"  # Code editor
-brew "sublime-text"        # Advanced text editor for code and prose (Sublime Text 3)
+cask "sublime-text"        # Advanced text editor for code and prose (Sublime Text 3)
 
 
 #############################################################
