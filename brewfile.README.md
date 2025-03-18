@@ -83,11 +83,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   **Usage:** `echo file.txt | entr command`  
   **Docs:** [entr Project](https://eradman.com/entrproject/)
 
-- **exa**  
-  *Modern alternative to `ls` with color and tree views.*  
-  **Usage:** `exa -la`  
-  **Docs:** [exa website](https://the.exa.website/)
-
 - **exiftool**  
   *Read and write metadata in files.*  
   **Usage:** `exiftool image.jpg`  
@@ -192,11 +187,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   **Usage:** `ctop`  
   **Docs:** [ctop on GitHub](https://github.com/bcicen/ctop)
 
-- **dog**  
-  *Simplified DNS lookup client.*  
-  **Usage:** `dog example.com`  
-  **Docs:** [dog on GitHub](https://github.com/ogham/dog)
-
 - **bpytop**  
   *Terminal-based system resource monitor with an intuitive UI.*  
   **Usage:** `bpytop`  
@@ -235,11 +225,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   *Spell checker for text files.*  
   **Usage:** `aspell check file.txt`  
   **Docs:** [Aspell Manual](http://aspell.net/)
-
-- **browsh**  
-  *Modern terminal-based web browser.*  
-  **Usage:** `browsh`  
-  **Docs:** [Browsh Docs](https://brow.sh/)
 
 - **buku**  
   *Manage your bookmarks from the terminal.*  
@@ -309,11 +294,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   *Interactive terminal UI for Git operations.*  
   **Usage:** `lazygit`  
   **Docs:** [lazygit on GitHub](https://github.com/jesseduffield/lazygit)
-  
-- **kdash**  
-  *Dashboard for monitoring Kubernetes clusters.*  
-  **Usage:** `kdash`  
-  **Docs:** [kdash on GitHub](https://github.com/kdash-rs/kdash)
 
 ---
 
@@ -717,11 +697,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   *Privacy-focused web browser with extensive add-ons.*  
   **Usage:** Launch Firefox from Applications  
   **Docs:** [Firefox Support](https://support.mozilla.org/en-US/products/firefox)
-  
-- **chromium**  
-  *Open-source web browser for a customizable experience.*  
-  **Usage:** Launch Chromium from Applications  
-  **Docs:** [Chromium Project](https://www.chromium.org/Home)
 
 ---
 
@@ -736,11 +711,6 @@ Use this document as a reference when configuring or troubleshooting your develo
   *Modern, open-source font for source code.*  
   **Usage:** Install and configure in your IDE or terminal  
   **Docs:** [Hack Font](https://sourcefoundry.org/hack/)
-  
-- **font-inconsolata**  
-  *Monospaced font optimized for code listings and terminals.*  
-  **Usage:** Install and use in your editor  
-  **Docs:** [Inconsolata on Google Fonts](https://fonts.google.com/specimen/Inconsolata)
   
 - **font-meslo-lg-nerd-font**  
   *Enhanced Meslo font with additional glyphs for icons.*  
