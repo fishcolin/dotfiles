@@ -8,11 +8,10 @@ cask_args appdir: '~/Applications', require_sha: true
 
 # Taps
 tap "homebrew/services"
-tap "browsh-org/homebrew-browsh"
-tap "espanso/espanso"
+# tap "espanso/espanso"
 tap "jesseduffield/lazygit"
-tap "koekeishiya/formulae"
-tap "kdash-rs/kdash"
+# tap "koekeishiya/formulae"
+# tap "kdash-rs/kdash"
 
 #############################################################
 # Command Line Essentials
@@ -211,6 +210,14 @@ cask "nordvpn"            # VPN client
 #############################################################
 cask "firefox"
 # cask "orion"         # Excluded: Niche/outdated browser
+
+#############################################################
+# Desktop Applications - AI
+#############################################################
+cask "cursor"              # Cursor: AI-powered desktop app
+cask "windsurf"            # Windsurf: Desktop application
+cask "claude-for-desktop"  # Claude for Desktop: Anthropic’s AI assistant
+cask "chatgpt-for-desktop" # ChatGPT for Desktop: OpenAI ChatGPT client
 
 #############################################################
 # macOS-Specific
