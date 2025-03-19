@@ -710,6 +710,32 @@ Use this document as a reference when configuring or troubleshooting your develo
 
 ---
 
+## Desktop Applications – AI
+
+Below are sample Markdown entries—modeled after the style in your reference document—for the new casks:
+
+- **cursor**  
+  *An AI-powered code assistant designed to integrate into your workflow, helping you write and debug code faster.*  
+  **Usage:** Launch the Cursor app from your Applications folder and open a file for AI-assisted editing.  
+  **Docs:** [Cursor Official Site](https://cursor.ai)
+
+- **windsurf**  
+  *A desktop application that provides streamlined access to Anthropic’s Claude for coding support and debugging, with a subscription model optimized for developers.*  
+  **Usage:** Launch Windsurf from Applications, log in with your credentials, and start interacting with Claude via its intuitive interface.  
+  **Docs:** [Windsurf Homebrew Cask](https://formulae.brew.sh/cask/windsurf)
+
+- **claude**  
+  *Anthropic’s official Claude AI assistant app, offering a conversational interface to help with software development, debugging, and creative problem solving.*  
+  **Usage:** Open Claude from Applications to begin a new conversation for coding queries or general assistance.  
+  **Docs:** [Claude Download & Docs](https://claude.ai/download)
+
+- **chatgpt**  
+  *OpenAI’s official ChatGPT desktop app, optimized for macOS (macOS ≥ 14 and Apple Silicon) to provide a native ChatGPT experience on your desktop.*  
+  **Usage:** Launch ChatGPT from Applications or run `open -a ChatGPT` from the terminal.  
+  **Docs:** [ChatGPT Official Site](https://chatgpt.com)
+
+---
+
 ## macOS-Specific – Fonts
 
 - **font-fira-code**  
