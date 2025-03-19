@@ -214,10 +214,10 @@ cask "firefox"
 #############################################################
 # Desktop Applications - AI
 #############################################################
-cask "cursor"              # Cursor: AI-powered desktop app
-cask "windsurf"            # Windsurf: Desktop application
-cask "claude-for-desktop"  # Claude for Desktop: Anthropic’s AI assistant
-cask "chatgpt-for-desktop" # ChatGPT for Desktop: OpenAI ChatGPT client
+cask "cursor"          # Cursor: AI-powered desktop app
+cask "windsurf"        # Windsurf: Desktop application
+cask "claude"          # Claude for Desktop: Anthropic’s AI assistant
+cask "chatgpt"         # ChatGPT for Desktop: OpenAI ChatGPT client
 
 #############################################################
 # macOS-Specific
@@ -257,6 +257,7 @@ brew "iproute2mac"     # Network utilities for macOS
 # brew "skhd"            # Hotkey daemon
 cask "stats"           # System monitor in menubar
 # brew "yabai"           # Tiling window manager
+cask "rectangle"         # Resize/snap windows
 
 # Utility Apps
 # cask "coteditor"       # Plain-text editor
